@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteRule ^(.*) - [E=BASE:%1]
+RewriteRule ^san-pham-moi.html ./san_pham.php?kihieu=san-pham-moi
+RewriteRule ^san-pham.html ./san_pham.php?kihieu=danh-sach-san-pham
+RewriteRule ^san-pham/tim-kiem-san-pham.html ./san_pham.php?kihieu=tim-kiem-san-pham
+RewriteRule ^san-pham/([0-9]+) ./san_pham.php?kihieu=danh-sach-san-pham&page=$1
+RewriteRule ^san-pham-khuyen-mai.html ./san_pham.php?kihieu=san-pham-khuyen-mai
+RewriteRule ^san-pham/([a-z-_]+).html ./san_pham.php?kihieu=san-pham-loai-cha&key=$1
+RewriteRule ^san-pham/([a-z-_]+)/([a-z-_]+).html ./san_pham.php?kihieu=san-pham-loai-con&key=$2
+RewriteRule ^san-pham/([a-z0-9-_]+) ./san_pham.php?kihieu=chi-tiet-san-pham&key=$1
+RewriteRule ^khach-hang/them-gio-hang.html ./khach_hang.php?kihieu=them-mat-hang
+RewriteRule ^khach-hang/thong-tin-gio-hang.html ./khach_hang.php?kihieu=thong-tin-gio-hang
+RewriteRule ^index.php ./san_pham.php
+RewriteRule ^khach-hang/dat-hang.html ./khach_hang.php?kihieu=dat-hang
+RewriteRule ^khach_hang/thong-tin-don-dat-hang-([0-9]+) ./khach_hang.php?kihieu=thong-tin-don-dat-hang&key=$1
+RewriteRule ^khach_hang/thong-tin-don-dat-hang.html ./khach_hang.php?kihieu=thong-tin-don-dat-hang
+RewriteRule ^quan-tri.html ./nguoi_dung.php?kihieu=he-thong
+RewriteRule ^quan-tri/dang-nhap.html ./nguoi_dung.php?kihieu=dang-nhap
+RewriteRule ^quan-tri/he-thong.html ./nguoi_dung.php?kihieu=he-thong
+RewriteRule ^quan-tri/nguoi-dung/dang-xuat.html ./nguoi_dung.php?kihieu=dang-xuat
+RewriteRule ^quan-tri/san-pham.html ./san_pham.php?kihieu=danh-sach-san-pham-admin
+RewriteRule ^quan-tri/san-pham/([0-9]+) ./san_pham.php?kihieu=danh-sach-san-pham-admin&page=$1
+RewriteRule ^quan-tri/san-pham/them-san-pham.html ./san_pham.php?kihieu=them-san-pham
+RewriteRule ^quan-tri/san-pham/cap-nhat-san-pham/([0-9]+) ./san_pham.php?kihieu=cap-nhat-san-pham&key=$1
